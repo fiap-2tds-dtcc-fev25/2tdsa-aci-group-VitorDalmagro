@@ -18,7 +18,7 @@ ADMIN_USERNAME=$(az acr credential show --name ${ACR_NAME} \
 ADMIN_PASSWORD=$(az acr credential show --name ${ACR_NAME} \
                                         --resource-group rg-money-hub \
                                  --query passwords[0].value --output tsv)
-az conatiner create \
+az container create \
   --resource-group rg-money-hub \
   --file aci-deploy.yaml \
   --output table
