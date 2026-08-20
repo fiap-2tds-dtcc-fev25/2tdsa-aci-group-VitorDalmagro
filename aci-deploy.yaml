@@ -1,4 +1,4 @@
-apiVersion: '2021-10-01'
+apiVersion: "2021-10-01"
 location: eastus
 name: money-hub-compose
 properties:
@@ -55,9 +55,9 @@ properties:
             cpu: 1
             memoryInGB: 1
   imageRegistryCredentials:
-    - server: ${ACR_SERVER}      # Registro do Servidor
-      username: ${ACR_USERNAME}  # usuário admin ou clientId do service principal
-      password: ${ACR_PASSWORD}  # senha do admin user ou secret do service principal
+    - server: ${ACR_SERVER} # Registro do Servidor
+      username: ${ACR_USERNAME} # usuário admin ou clientId do service principal
+      password: ${ACR_PASSWORD} # senha do admin user ou secret do service principal
   osType: Linux
   ipAddress:
     type: Public
