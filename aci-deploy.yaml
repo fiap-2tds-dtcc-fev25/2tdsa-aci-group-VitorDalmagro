@@ -21,9 +21,6 @@ properties:
           requests:
             cpu: 1
             memoryInGB: 1
-        volumeMounts:
-          - name: mysqldata
-            mountPath: /var/lib/mysql
     - name: api-dimdim
       properties:
         image: ${ACR_SERVER}/api-dimdim:v1
@@ -69,11 +66,5 @@ properties:
       - port: 5000
         protocol: tcp
   restartPolicy: Always
-  volumes:
-    - name: mysqldata
-      azureFile:
-        shareName: ${FILE_SHARE}
-        storageAccountName: ${STORAGE_ACCOUNT}
-        storageAccountKey: ${STORAGE_KEY}
 tags: {}
 type: Microsoft.ContainerInstance/containerGroups
